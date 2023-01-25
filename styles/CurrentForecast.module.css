@@ -34,7 +34,7 @@
 .additionalDataReportContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fre 1fr;
+  grid-template-rows: 1fr 1fr;
   padding: 2rem 5rem;
   width: 50%;
   margin: 0 auto;
@@ -60,4 +60,36 @@
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   text-align: right;
+}
+
+@media screen and (max-width: 1300px) {
+  .additionalDataReportContainer {
+    display: inline-block;
+  }
+
+  .left > p:nth-child(1) {
+    text-align: center;
+  }
+
+  .left > p:nth-child(2) {
+    text-align: center;
+  }
+  .right > p:nth-child(1) {
+    text-align: center;
+  }
+  .right > p:nth-child(2) {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .additionalDataReportContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .additionalDataReportContainer {
+    display: none;
+  }
 }

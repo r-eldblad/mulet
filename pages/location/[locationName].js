@@ -19,15 +19,11 @@ const Location = () => {
         `https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${process.env.NEXT_PUBLIC_ACCU_WEATHER_API_KEY}&q=${locationName}&language=sv&details=true`
       )
       .then((res) => {
-        setSearchedLocation(
-          res.data.find(
-            (location) => location.Country.LocalizedName === "Sverige"
-          )
-        );
-
         const temporaryLocation = res.data.find(
           (location) => location.Country.LocalizedName === "Sverige"
         );
+
+        setSearchedLocation(temporaryLocation);
 
         if (temporaryLocation) {
           axios
@@ -57,16 +53,3 @@ const Location = () => {
 };
 
 export default Location;
-
-/*
-
-Skapa en dynamisk route.
-Extrahera parametern, som kommer användas som en sökterm i queryn som skickas till API:et
-
-
-
-
-
-
-
-*/

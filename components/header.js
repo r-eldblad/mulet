@@ -7,7 +7,7 @@ const Header = () => {
       <h1 className={styles.logo}>Mulet.se</h1>
       <input
         id="searchLocation"
-        className="searchLocationBar"
+        className={styles.searchLocationBar}
         type="search"
         placeholder="Sök plats"
       />

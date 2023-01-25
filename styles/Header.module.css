@@ -18,3 +18,20 @@
 .list {
   list-style-type: none;
 }
+
+.searchLocationBar {
+  height: 1rem;
+  width: 20em;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .searchLocationBar {
+    display: none;
+  }
+
+  .header {
+    display: block;
+    text-align: center;
+  }
+}
