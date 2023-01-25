@@ -1,0 +1,63 @@
+.mainContainer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.location {
+  font-family: "Open Sans";
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.statusText {
+  font-size: 1.3rem;
+}
+
+.makeBold {
+  font-weight: 800;
+  font-family: "Open Sans";
+}
+
+.imageFrame {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.temperatureText {
+  font-weight: 800;
+  font-family: "Open Sans";
+}
+
+.additionalDataReportContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fre 1fr;
+  padding: 2rem 5rem;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.3rem;
+}
+
+.left > p:nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  text-align: left;
+}
+.left > p:nth-child(2) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  text-align: left;
+}
+.right > p:nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  text-align: right;
+}
+.right > p:nth-child(2) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  text-align: right;
+}

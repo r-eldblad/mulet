@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.logo {
+  color: rgb(0, 0, 0);
+  font-family: "Open Sans";
+  font-weight: 800;
+}
+
+.menuContainer {
+  text-decoration: none;
+}
+
+.list {
+  list-style-type: none;
+}
