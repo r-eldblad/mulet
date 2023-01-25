@@ -16,7 +16,7 @@ const Location = () => {
   const fetchWeatherData = useCallback((locationName) => {
     axios
       .get(
-        `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${process.env.NEXT_PUBLIC_ACCU_WEATHER_API_KEY}&q=${locationName}&language=sv&details=true`
+        `https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${process.env.NEXT_PUBLIC_ACCU_WEATHER_API_KEY}&q=${locationName}&language=sv&details=true`
       )
       .then((res) => {
         setSearchedLocation(
@@ -32,7 +32,7 @@ const Location = () => {
         if (temporaryLocation) {
           axios
             .get(
-              `http://dataservice.accuweather.com/currentconditions/v1/${temporaryLocation.Key}?apikey=${process.env.NEXT_PUBLIC_ACCU_WEATHER_API_KEY}&language=sv&details=true`
+              `https://dataservice.accuweather.com/currentconditions/v1/${temporaryLocation.Key}?apikey=${process.env.NEXT_PUBLIC_ACCU_WEATHER_API_KEY}&language=sv&details=true`
             )
             .then((res) => {
               setSearchedLocationForecast(res.data);
